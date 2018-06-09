@@ -40,29 +40,9 @@ This project was created using KiCad 5 RC2. Use it to open and edit this design.
 
 ## Installing
 
-What things you need to install the software and how to install them
+Install the H-THING using standoffs on the robot. Apply motor power (10-17V) to the screw terminals on the right hand side. **Make sure the polarity is correct!** The other screw terminal is for power pass-trough. Use the passthrough to chain more H-THINGs together. Finally, connect the motor to the last screw terminal. 
 
-```
-Give examples
-```
-
-## Using
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+## Signal Control
 
 
 ## License
