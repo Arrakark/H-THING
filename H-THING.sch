@@ -97,8 +97,6 @@ Wire Wire Line
 Wire Wire Line
 	3700 4450 3700 4550
 Wire Wire Line
-	3700 4550 5100 4550
-Wire Wire Line
 	5100 4550 5100 4450
 Wire Wire Line
 	3700 3450 3700 3350
@@ -183,15 +181,15 @@ Connection ~ 4400 3350
 $Comp
 L GND #PWR02
 U 1 1 5B19D9C4
-P 3950 5050
-F 0 "#PWR02" H 3950 4800 50  0001 C CNN
-F 1 "GND" H 3950 4900 50  0000 C CNN
-F 2 "" H 3950 5050 50  0001 C CNN
-F 3 "" H 3950 5050 50  0001 C CNN
-	1    3950 5050
+P 4200 5050
+F 0 "#PWR02" H 4200 4800 50  0001 C CNN
+F 1 "GND" H 4200 4900 50  0000 C CNN
+F 2 "" H 4200 5050 50  0001 C CNN
+F 3 "" H 4200 5050 50  0001 C CNN
+	1    4200 5050
 	1    0    0    -1  
 $EndComp
-Connection ~ 3950 4550
+Connection ~ 4200 4550
 $Comp
 L VCC #PWR03
 U 1 1 5B19DA62
@@ -512,43 +510,11 @@ Wire Notes Line
 	6850 4250 9850 4250
 Text Notes 6950 4150 0    60   ~ 0
 Signal Connection
-Wire Wire Line
-	4250 4700 4250 4550
-Connection ~ 4250 4550
-$Comp
-L GND #PWR015
-U 1 1 5B1A066A
-P 4250 5050
-F 0 "#PWR015" H 4250 4800 50  0001 C CNN
-F 1 "GND" H 4250 4900 50  0000 C CNN
-F 2 "" H 4250 5050 50  0001 C CNN
-F 3 "" H 4250 5050 50  0001 C CNN
-	1    4250 5050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4250 5050 4250 5000
-Wire Wire Line
-	4550 4550 4550 4750
-Wire Wire Line
-	4550 4750 5000 4750
-Connection ~ 4550 4550
-Text Label 5000 4750 2    60   ~ 0
+Connection ~ 4500 4550
+Text Label 4950 4750 2    60   ~ 0
 I_SENSE
 Text Notes 3100 6050 0    60   ~ 0
 Using I_SENSE:\nPCB trace between GND and halfbridge acts as resistor.\nRead I_SENSE using an analogRead and correlate with motor current.\nBypass feature by placing R3 (use wire).
-$Comp
-L R R3
-U 1 1 5B1A060E
-P 4250 4850
-F 0 "R3" V 4330 4850 50  0000 C CNN
-F 1 "0R00" V 4250 4850 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 4180 4850 50  0001 C CNN
-F 3 "" H 4250 4850 50  0001 C CNN
-F 4 "DNP" V 4150 4850 60  0000 C CNN "DNP"
-	1    4250 4850
-	1    0    0    -1  
-$EndComp
 $Comp
 L Conn_01x03_Female J4
 U 1 1 5B1A0FE1
@@ -577,16 +543,22 @@ Reverse connector to \nreverse motor direction
 $Comp
 L R R6
 U 1 1 5B1ABA86
-P 3950 4850
-F 0 "R6" V 4030 4850 50  0000 C CNN
-F 1 "0R20" V 3950 4850 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3880 4850 50  0001 C CNN
-F 3 "" H 3950 4850 50  0001 C CNN
-	1    3950 4850
+P 4200 4850
+F 0 "R6" V 4280 4850 50  0000 C CNN
+F 1 "0R20" V 4200 4850 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 4130 4850 50  0001 C CNN
+F 3 "" H 4200 4850 50  0001 C CNN
+	1    4200 4850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3950 4700 3950 4550
+	4200 4700 4200 4550
 Wire Wire Line
-	3950 5050 3950 5000
+	4200 5050 4200 5000
+Wire Wire Line
+	4500 4550 4500 4750
+Wire Wire Line
+	4500 4750 4950 4750
+Wire Wire Line
+	3700 4550 5100 4550
 $EndSCHEMATC
