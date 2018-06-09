@@ -1,38 +1,6 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:switches
-LIBS:relays
-LIBS:motors
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
+EESchema Schematic File Version 4
 LIBS:H-THING-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -47,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Q_NMOS_GDS Q3
+L device:Q_NMOS_GDS Q3
 U 1 1 5B19D5CC
 P 3600 4250
 F 0 "Q3" H 3800 4300 50  0000 L CNN
@@ -58,7 +26,7 @@ F 3 "" H 3600 4250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Q_PMOS_GDS Q2
+L device:Q_PMOS_GDS Q2
 U 1 1 5B19D62B
 P 3600 3650
 F 0 "Q2" H 3800 3700 50  0000 L CNN
@@ -69,7 +37,7 @@ F 3 "" H 3600 3650 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L Q_NMOS_GDS Q5
+L device:Q_NMOS_GDS Q5
 U 1 1 5B19D6B4
 P 5200 4250
 F 0 "Q5" H 5400 4300 50  0000 L CNN
@@ -80,7 +48,7 @@ F 3 "" H 5200 4250 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Q_PMOS_GDS Q4
+L device:Q_PMOS_GDS Q4
 U 1 1 5B19D6BA
 P 5200 3650
 F 0 "Q4" H 5400 3700 50  0000 L CNN
@@ -91,9 +59,9 @@ F 3 "" H 5200 3650 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	3700 3850 3700 4050
+	3700 3850 3700 3950
 Wire Wire Line
-	5100 3850 5100 4050
+	5100 3850 5100 3950
 Wire Wire Line
 	3700 4450 3700 4550
 Wire Wire Line
@@ -101,11 +69,11 @@ Wire Wire Line
 Wire Wire Line
 	3700 3450 3700 3350
 Wire Wire Line
-	3700 3350 5100 3350
+	3700 3350 4400 3350
 Wire Wire Line
 	5100 3350 5100 3450
 $Comp
-L R R2
+L device:R R2
 U 1 1 5B19D715
 P 3300 3350
 F 0 "R2" V 3380 3350 50  0000 C CNN
@@ -116,7 +84,7 @@ F 3 "" H 3300 3350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R4
+L device:R R4
 U 1 1 5B19D78B
 P 5500 3350
 F 0 "R4" V 5580 3350 50  0000 C CNN
@@ -129,11 +97,11 @@ $EndComp
 Wire Wire Line
 	3400 3650 3300 3650
 Wire Wire Line
-	3300 3500 3300 4550
+	3300 3500 3300 3650
 Wire Wire Line
 	5400 3650 5500 3650
 Wire Wire Line
-	5500 3500 5500 4550
+	5500 3500 5500 3650
 Wire Wire Line
 	3300 4250 3400 4250
 Connection ~ 3300 3650
@@ -141,7 +109,7 @@ Wire Wire Line
 	5500 4250 5400 4250
 Connection ~ 5500 3650
 $Comp
-L 2N3904 Q1
+L H-THING-rescue:2N3904 Q1
 U 1 1 5B19D825
 P 3200 4750
 F 0 "Q1" H 3400 4825 50  0000 L CNN
@@ -152,7 +120,7 @@ F 3 "" H 3200 4750 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 2N3904 Q6
+L H-THING-rescue:2N3904 Q6
 U 1 1 5B19D865
 P 5600 4750
 F 0 "Q6" H 5800 4825 50  0000 L CNN
@@ -165,7 +133,7 @@ $EndComp
 Connection ~ 3300 4250
 Connection ~ 5500 4250
 $Comp
-L VCC #PWR01
+L power1:VCC #PWR01
 U 1 1 5B19D93A
 P 4400 3050
 F 0 "#PWR01" H 4400 2900 50  0001 C CNN
@@ -179,7 +147,7 @@ Wire Wire Line
 	4400 3050 4400 3350
 Connection ~ 4400 3350
 $Comp
-L GND #PWR02
+L power1:GND #PWR02
 U 1 1 5B19D9C4
 P 4200 5050
 F 0 "#PWR02" H 4200 4800 50  0001 C CNN
@@ -191,7 +159,7 @@ F 3 "" H 4200 5050 50  0001 C CNN
 $EndComp
 Connection ~ 4200 4550
 $Comp
-L VCC #PWR03
+L power1:VCC #PWR03
 U 1 1 5B19DA62
 P 3300 3050
 F 0 "#PWR03" H 3300 2900 50  0001 C CNN
@@ -202,7 +170,7 @@ F 3 "" H 3300 3050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR04
+L power1:VCC #PWR04
 U 1 1 5B19DABF
 P 5500 3050
 F 0 "#PWR04" H 5500 2900 50  0001 C CNN
@@ -217,7 +185,7 @@ Wire Wire Line
 Wire Wire Line
 	3300 3050 3300 3200
 $Comp
-L GND #PWR05
+L power1:GND #PWR05
 U 1 1 5B19DB8E
 P 3300 5050
 F 0 "#PWR05" H 3300 4800 50  0001 C CNN
@@ -228,7 +196,7 @@ F 3 "" H 3300 5050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR06
+L power1:GND #PWR06
 U 1 1 5B19DBB1
 P 5500 5050
 F 0 "#PWR06" H 5500 4800 50  0001 C CNN
@@ -243,7 +211,7 @@ Wire Wire Line
 Wire Wire Line
 	3300 5050 3300 4950
 $Comp
-L R R1
+L device:R R1
 U 1 1 5B19DC29
 P 2750 4750
 F 0 "R1" V 2830 4750 50  0000 C CNN
@@ -254,7 +222,7 @@ F 3 "" H 2750 4750 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R5
+L device:R R5
 U 1 1 5B19DC75
 P 6050 4750
 F 0 "R5" V 6130 4750 50  0000 C CNN
@@ -277,7 +245,7 @@ HB1
 Text Label 6500 4750 2    60   ~ 0
 HB2
 $Comp
-L Screw_Terminal_01x02 J1
+L H-THING-rescue:Screw_Terminal_01x02 J1
 U 1 1 5B19DEE0
 P 4450 3700
 F 0 "J1" V 4650 3650 50  0000 C CNN
@@ -288,17 +256,17 @@ F 3 "" H 4450 3700 50  0001 C CNN
 	0    1    -1   0   
 $EndComp
 Wire Wire Line
-	3700 3950 4350 3950
+	3700 3950 4200 3950
 Wire Wire Line
 	4350 3950 4350 3900
 Connection ~ 3700 3950
 Wire Wire Line
 	4450 3900 4450 3950
 Wire Wire Line
-	4450 3950 5100 3950
+	4450 3950 4600 3950
 Connection ~ 5100 3950
 $Comp
-L C C1
+L device:C C1
 U 1 1 5B19E24C
 P 4400 4100
 F 0 "C1" V 4650 4100 50  0000 C CNN
@@ -319,7 +287,7 @@ Wire Wire Line
 	4600 4100 4600 3950
 Connection ~ 4600 3950
 $Comp
-L Screw_Terminal_01x02 J3
+L H-THING-rescue:Screw_Terminal_01x02 J3
 U 1 1 5B19E758
 P 8100 3100
 F 0 "J3" H 8100 3200 50  0000 C CNN
@@ -338,7 +306,7 @@ Wire Wire Line
 Wire Wire Line
 	8500 3200 8500 3350
 $Comp
-L VCC #PWR07
+L power1:VCC #PWR07
 U 1 1 5B19E8CE
 P 8500 2950
 F 0 "#PWR07" H 8500 2800 50  0001 C CNN
@@ -349,7 +317,7 @@ F 3 "" H 8500 2950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR08
+L power1:GND #PWR08
 U 1 1 5B19E900
 P 8500 3350
 F 0 "#PWR08" H 8500 3100 50  0001 C CNN
@@ -360,7 +328,7 @@ F 3 "" H 8500 3350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP C2
+L device:CP C2
 U 1 1 5B19EA69
 P 8950 3150
 F 0 "C2" H 8975 3250 50  0000 L CNN
@@ -371,7 +339,7 @@ F 3 "" H 8950 3150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR09
+L power1:VCC #PWR09
 U 1 1 5B19EAE8
 P 8950 2950
 F 0 "#PWR09" H 8950 2800 50  0001 C CNN
@@ -382,7 +350,7 @@ F 3 "" H 8950 2950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR010
+L power1:GND #PWR010
 U 1 1 5B19EB1D
 P 8950 3350
 F 0 "#PWR010" H 8950 3100 50  0001 C CNN
@@ -397,7 +365,7 @@ Wire Wire Line
 Wire Wire Line
 	8950 3350 8950 3300
 $Comp
-L C C3
+L device:C C3
 U 1 1 5B19ECF3
 P 9400 3150
 F 0 "C3" H 9425 3250 50  0000 L CNN
@@ -408,7 +376,7 @@ F 3 "" H 9400 3150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR011
+L power1:VCC #PWR011
 U 1 1 5B19ED6F
 P 9400 2950
 F 0 "#PWR011" H 9400 2800 50  0001 C CNN
@@ -419,7 +387,7 @@ F 3 "" H 9400 2950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR012
+L power1:GND #PWR012
 U 1 1 5B19EDA7
 P 9400 3350
 F 0 "#PWR012" H 9400 3100 50  0001 C CNN
@@ -434,7 +402,7 @@ Wire Wire Line
 Wire Wire Line
 	9400 3350 9400 3300
 $Comp
-L Screw_Terminal_01x02 J2
+L H-THING-rescue:Screw_Terminal_01x02 J2
 U 1 1 5B19F010
 P 7350 3200
 F 0 "J2" H 7350 3300 50  0000 C CNN
@@ -453,7 +421,7 @@ Wire Wire Line
 Wire Wire Line
 	7750 3200 7750 3350
 $Comp
-L VCC #PWR013
+L power1:VCC #PWR013
 U 1 1 5B19F01A
 P 7750 2950
 F 0 "#PWR013" H 7750 2800 50  0001 C CNN
@@ -464,7 +432,7 @@ F 3 "" H 7750 2950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR014
+L power1:GND #PWR014
 U 1 1 5B19F020
 P 7750 3350
 F 0 "#PWR014" H 7750 3100 50  0001 C CNN
@@ -516,7 +484,7 @@ I_SENSE
 Text Notes 3100 6050 0    60   ~ 0
 Using I_SENSE:\nPCB trace between GND and halfbridge acts as resistor.\nRead I_SENSE using an analogRead and correlate with motor current.\nBypass feature by placing R3 (use wire).
 $Comp
-L Conn_01x03_Female J4
+L H-THING-rescue:Conn_01x03_Female J4
 U 1 1 5B1A0FE1
 P 8050 4850
 F 0 "J4" H 8050 5050 50  0000 C CNN
@@ -541,7 +509,7 @@ I_SENSE
 Text Notes 8500 4900 0    60   ~ 0
 Reverse connector to \nreverse motor direction
 $Comp
-L R R6
+L device:R R6
 U 1 1 5B1ABA86
 P 4200 4850
 F 0 "R6" V 4280 4850 50  0000 C CNN
@@ -560,5 +528,27 @@ Wire Wire Line
 Wire Wire Line
 	4500 4750 4950 4750
 Wire Wire Line
-	3700 4550 5100 4550
+	3700 4550 4200 4550
+Wire Wire Line
+	3300 3650 3300 4250
+Wire Wire Line
+	5500 3650 5500 4250
+Wire Wire Line
+	3300 4250 3300 4550
+Wire Wire Line
+	5500 4250 5500 4550
+Wire Wire Line
+	4400 3350 5100 3350
+Wire Wire Line
+	4200 4550 4500 4550
+Wire Wire Line
+	3700 3950 3700 4050
+Wire Wire Line
+	5100 3950 5100 4050
+Wire Wire Line
+	4200 3950 4350 3950
+Wire Wire Line
+	4600 3950 5100 3950
+Wire Wire Line
+	4500 4550 5100 4550
 $EndSCHEMATC

@@ -1,0 +1,12 @@
+Reference, Quantity, Value, Footprint, Datasheet
+C1 C3 ,2,"100nF","Capacitors_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm",""
+C2 ,1,"470uF","Capacitors_THT:CP_Radial_D10.0mm_P5.00mm",""
+J1 ,1,"MOTOR_CON","Connectors_Terminal_Blocks:TerminalBlock_bornier-2_P5.08mm",""
+J2 ,1,"PWR_PASSTHRU","Connectors_Terminal_Blocks:TerminalBlock_bornier-2_P5.08mm",""
+J3 ,1,"MAIN_PWR","Connectors_Terminal_Blocks:TerminalBlock_bornier-2_P5.08mm",""
+J4 ,1,"SIG_CON","Socket_Strips:Socket_Strip_Straight_1x03_Pitch2.54mm",""
+Q1 Q6 ,2,"2N3904","TO_SOT_Packages_THT:TO-92_Inline_Narrow_Oval",""
+Q2 Q4 ,2,"IRF5305","TO_SOT_Packages_THT:TO-220-3_Vertical",""
+Q3 Q5 ,2,"HUF75321","TO_SOT_Packages_THT:TO-220-3_Vertical",""
+R1 R2 R4 R5 ,4,"1k00","Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical",""
+R6 ,1,"0R20","Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical",""
