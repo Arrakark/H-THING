@@ -16,6 +16,9 @@ An H-Bridge circuit for controlling a single robot motor.
 * To be used with <1000Hz switching freqnuency (500Hz is preferred)
 * Supports 3.3v and 5.0v logic level inputs
 * Capable of driving up to 3A
+* Requires only one PWM pin for speed, one digial I/O for direction
+* Can be used as a half-bridge if direction pin is disconnected
+* Has space for a current-sensing resistor (R6)
 
 This project was created using KiCad 5 RC2. Use it to open and edit this design.
 
@@ -40,14 +43,32 @@ This project was created using KiCad 5 RC2. Use it to open and edit this design.
 
 ## Installing
 
-Install the H-THING using standoffs on the robot. Apply motor power (10-17V) to the screw terminals on the right hand side. **Make sure the polarity is correct!** The other screw terminal is for power pass-trough. Use the passthrough to chain more H-THINGs together. Finally, connect the motor to the last screw terminal. 
+Install the H-THING using standoffs on the robot. Apply motor power (10-17V) to the screw terminals on the right hand side. **Make sure the polarity is correct!** The other screw terminal is for power pass-trough. Use the passthrough to chain more H-THINGs together. Finally, connect the motor to the last screw terminal (the one with the motor label).
+
+Connect the H-THING to a microcontroller by connecting one of the outermost pins to a PWM pin, and the other to a digital I/O (non PWM).
 
 ## Signal Control
 
+Use the library included with this repo to control the speed and direction of the motor. 
+
+Use the following code to create a H-THING object:
+```
+#define SPEED_PIN 9 
+#define DIR_PIN 3 
+left_motor hthing(SPEED_PIN, DIR_PIN);
+```
+To control the motor:
+```
+left_motor.run(0,200); //runs the left motor backwards at 200/255% speed
+left_motor.run(1,255); //runs the left motor forwards at full speed
+left_motor.stop(); //stops the motor
+left_motor.run(-255); //runs the motor backwards
+left_motor.run(120); //runs the motor forwards
+```
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/Arrakark/H-THING/blob/master/LICENSE) file for details
 
 ## Acknowledgments
 
