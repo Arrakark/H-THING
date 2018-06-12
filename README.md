@@ -19,6 +19,7 @@ An H-Bridge circuit for controlling a single robot motor.
 * Requires only one PWM pin for speed, one digial I/O for direction
 * Can be used as a half-bridge if direction pin is disconnected
 * Has space for a current-sensing resistor (R6)
+* **Cannot be used to coast the motor**
 
 This project was created using KiCad 5 RC2. Use it to open and edit this design.
 
