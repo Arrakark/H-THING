@@ -44,7 +44,7 @@ This project was created using KiCad 5 RC2. Use it to open and edit this design.
 
 ## Installing
 
-Install the H-THING using standoffs on the robot. Apply motor power (10-17V) to the screw terminals on the right hand side. **Make sure the polarity is correct!** The other screw terminal is for power pass-trough. Use the passthrough to chain more H-THINGs together. Finally, connect the motor to the last screw terminal (the one with the motor label).
+Install the H-THING using standoffs on the robot. Apply motor power (5-17V) to the screw terminals on the right hand side. **Make sure the polarity is correct!** The other screw terminal is for power pass-trough. Use the passthrough to chain more H-THINGs together. Finally, connect the motor to the last screw terminal (the one with the motor label).
 
 Connect the H-THING to a microcontroller by connecting one of the outermost pins to a PWM pin, and the other to a digital I/O (non PWM).
 
