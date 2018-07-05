@@ -56,12 +56,10 @@ Use the following code to create a H-THING object:
 ```
 #define SPEED_PIN 9 
 #define DIR_PIN 3 
-left_motor hthing(SPEED_PIN, DIR_PIN);
+HTHING leftm = HTHING(PA3,PA2);
 ```
 To control the motor:
 ```
-left_motor.run(0,200); //runs the left motor backwards at 200/255% speed
-left_motor.run(1,255); //runs the left motor forwards at full speed
 left_motor.stop(); //stops the motor
 left_motor.run(-255); //runs the motor backwards
 left_motor.run(120); //runs the motor forwards
